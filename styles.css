@@ -1,0 +1,125 @@
+/* VARS */
+:root{
+  --bg-color:#0f1115;
+  --surface-color:#151821;
+  --primary-color:#00aaff;
+  --primary-hover-color:#0088cc;
+  --text-color:#e0e0e0;
+  --secondary-text-color:#a0a0a0;
+  --border-color:#262a36;
+
+  --font-primary:'Poppins',sans-serif;
+  --font-pixel:'Press Start 2P',cursive;
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{background:var(--bg-color);color:var(--text-color);font-family:var(--font-primary);line-height:1.7}
+
+/* Camada do Vanta (preenche a tela, atrás de tudo) */
+#vanta-bg{
+  position:fixed; inset:0; z-index:-1;
+}
+
+/* CONTAINER / TITLES */
+.container{max-width:1100px;margin:0 auto;padding:0 2rem}
+.section-title{font-size:2.5rem;font-weight:700;margin-bottom:3rem;text-align:center;color:var(--primary-color)}
+
+/* HEADER */
+.header{background:rgba(15,17,21,.75);backdrop-filter:blur(12px);border-bottom:1px solid var(--border-color);position:fixed;width:100%;top:0;z-index:100}
+.nav-container{display:flex;justify-content:space-between;align-items:center;height:80px}
+.logo{font-size:1.5rem;font-weight:600;color:var(--text-color);text-decoration:none}
+.nav-menu{display:flex;gap:2.5rem}
+.nav-menu a{text-decoration:none;color:var(--secondary-text-color);font-weight:500;transition:color .3s;position:relative}
+.nav-menu a:hover{color:var(--primary-color)}
+.nav-menu a::after{content:'';position:absolute;width:0;height:2px;bottom:-5px;left:0;background:var(--primary-color);transition:width .3s}
+.nav-menu a:hover::after{width:100%}
+
+/* HAMBURGER */
+.hamburger{display:none;background:none;border:0;cursor:pointer;width:24px;height:24px;background-image:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255,255,255,1)' stroke-linecap='round' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");background-repeat:no-repeat;background-size:contain}
+
+/* HERO */
+.hero{min-height:90vh;display:flex;align-items:center;padding-top:80px}
+.hero-container{display:flex;align-items:center;justify-content:space-between;gap:2rem}
+.hero-text{max-width:600px}
+.hero-text h1{font-size:3.5rem;font-weight:700;line-height:1.2;margin-bottom:1rem}
+.hero-text .subtitle{font-size:1.2rem;color:var(--secondary-text-color);margin-bottom:2rem}
+.pixel-text{font-family:var(--font-pixel);font-size:1.1rem;color:var(--primary-color)}
+.hero-image{width:350px;height:350px;border-radius:50%;overflow:hidden;border:5px solid var(--primary-color);box-shadow:0 0 30px rgba(0,170,255,.35);will-change:transform,opacity}
+.hero-image img{width:100%;height:100%;object-fit:cover}
+
+/* BUTTONS */
+.btn-primary,.btn-secondary{display:inline-block;padding:12px 28px;border-radius:8px;text-decoration:none;font-weight:600;transition:all .3s}
+.btn-primary{background:var(--primary-color);color:#121212}
+.btn-primary:hover{background:var(--primary-hover-color);transform:translateY(-3px)}
+.btn-secondary{border:2px solid var(--primary-color);color:var(--primary-color)}
+.btn-secondary:hover{background:var(--primary-color);color:#121212}
+
+/* SECTIONS */
+.content-section{background-color:rgba(21,24,33,.78);padding:80px 0;backdrop-filter:blur(6px)}
+.featured-projects,.skills,.contact{padding:0}
+
+/* PROJECTS */
+.project-card{background:var(--surface-color);border-radius:12px;overflow:hidden;border:1px solid var(--border-color);transition:transform .3s, box-shadow .3s;height:100%;display:flex;flex-direction:column;will-change:transform}
+.project-card:hover{transform:translateY(-8px);box-shadow:0 10px 30px rgba(0,0,0,.25)}
+.project-image{width:100%;height:200px;overflow:hidden;flex-shrink:0}
+.project-image img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.project-card:hover .project-image img{transform:scale(1.05)}
+.project-info{flex-grow:1;display:flex;flex-direction:column;padding:1.5rem}
+.project-info h3{font-size:1.3rem;margin-bottom:.5rem}
+.project-info p{color:var(--secondary-text-color);margin-bottom:1.5rem}
+.project-links{margin-top:auto;display:flex;gap:1.5rem}
+.project-link{color:var(--primary-color);text-decoration:none;font-weight:500}
+.project-link i{margin-right:.5rem}
+
+/* CONTACT */
+.contact{text-align:center}
+.contact p{max-width:500px;margin:0 auto 2rem;color:var(--secondary-text-color)}
+.contact-links{display:flex;justify-content:center;gap:2rem;margin-bottom:3rem}
+.contact-icon{font-size:2rem;color:var(--secondary-text-color);transition:color .3s, transform .3s}
+.contact-icon:hover{color:var(--primary-color);transform:translateY(-5px)}
+.contact .btn-secondary i{margin-right:.5rem}
+
+/* FOOTER */
+.footer{text-align:center;padding:2rem 0;border-top:1px solid var(--border-color);color:var(--secondary-text-color);font-size:.9rem;background:rgba(15,17,21,.75);backdrop-filter:blur(10px)}
+
+/* SCROLL ANIM */
+.animatable{opacity:0;transform:translateY(30px);transition:opacity .6s ease-out, transform .6s ease-out}
+.animatable.fade-in{opacity:1;transform:translateY(0)}
+
+/* SWIPER */
+.skills{background-color:transparent}
+.skills-slider{position:relative;padding-bottom:28px}
+.skills-slider-container{max-width:1200px;margin:0 auto;padding:0 1rem}
+.swiper-slide{display:flex;justify-content:center;align-items:center;height:auto}
+.skill-card{width:100%;display:flex;flex-direction:column;justify-content:center;text-align:center;padding:2rem;background:var(--surface-color);border-radius:12px;border:1px solid var(--border-color);box-shadow:0 4px 10px rgba(0,0,0,.2);transition:transform .3s;cursor:grab}
+.skill-card:active{cursor:grabbing}
+.skill-card:hover{transform:translateY(-5px)}
+.skill-card i{font-size:3rem;color:var(--primary-color);margin-bottom:1rem}
+.skill-card h3{font-size:1.25rem;margin-bottom:.5rem}
+.skill-card p{color:var(--secondary-text-color);font-size:.9rem}
+.skills .swiper-scrollbar,.projects-slider-container .swiper-scrollbar{position:absolute;bottom:10px;left:50%;transform:translateX(-50%);width:90%;height:6px;background:rgba(255,255,255,.06);border-radius:6px}
+.skills .swiper-scrollbar-drag,.projects-slider-container .swiper-scrollbar-drag{background:var(--primary-color);border-radius:6px}
+.projects-slider-container{max-width:1200px;margin:0 auto;padding:0 1rem;position:relative}
+.projects-slider .swiper-wrapper{padding-bottom:3rem}
+.projects-slider .swiper-slide{height:auto}
+
+/* RESPONSIVO */
+@media (max-width:992px){
+  .hero-container{flex-direction:column-reverse;text-align:center}
+  .hero-text h1{font-size:2.8rem}
+  .hero-image{width:280px;height:280px;margin-bottom:2rem}
+}
+@media (max-width:768px){
+  .nav-menu{position:fixed;top:80px;right:-100%;width:70%;height:calc(100vh - 80px);background:rgba(21,24,33,.95);flex-direction:column;align-items:center;padding-top:3rem;transition:right .4s;backdrop-filter:blur(8px)}
+  .nav-menu.active{right:0}
+  .hamburger{display:block}
+  .section-title{font-size:2rem}
+  .hero-text h1{font-size:2.2rem}
+  .hero-text .subtitle{font-size:1.1rem}
+}
+
+/* Acessibilidade: reduz movimento */
+@media (prefers-reduced-motion: reduce){
+  #vanta-bg{display:none}
+}

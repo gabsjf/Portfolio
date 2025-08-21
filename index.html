@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gabriel Felix | Desenvolvedor Web e de Jogos</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Press+Start+2P&display=swap" rel="stylesheet"/>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+
+
+<body data-effect="net">
+  
+  <div id="vanta-bg" aria-hidden="true"></div>
+
+  <header class="header">
+    <div class="container nav-container">
+      <a href="#" class="logo">Gabriel Felix</a>
+      <nav class="nav-menu">
+        <a href="#projetos">Projetos</a>
+        <a href="#habilidades">Habilidades</a>
+        <a href="#contato">Contato</a>
+      </nav>
+      <button class="hamburger" aria-label="Abrir menu"></button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-container">
+        <div class="hero-text">
+          <h1>Olá, eu sou o Gabriel.</h1>
+          <p class="subtitle">
+            Desenvolvedor criativo, transformando ideias em <span id="typed-text"></span>
+          </p>
+          <a href="#contato" class="btn-primary">Vamos Conversar</a>
+        </div>
+        <figure class="hero-image animatable">
+          <img src="src/eu.jpeg" alt="Retrato de Gabriel Felix" decoding="async"/>
+        </figure>
+      </div>
+    </section>
+
+    <section class="featured-projects content-section" id="projetos">
+      <div class="container">
+        <h2 class="section-title">Projetos em Destaque</h2>
+      </div>
+      <div class="projects-slider-container">
+        <div class="swiper projects-slider">
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <article class="project-card">
+                <div class="project-image">
+                  <img src="/src/dashboard.jpeg" alt="Prévia do Sistema de Inventário do CREA/MS" loading="lazy" decoding="async"/>
+                </div>
+                <div class="project-info">
+                  <h3>Sistema de Inventário - CREA/MS</h3>
+                  <p>Solução em C# .NET e MySQL para gestão de patrimônio, com arquitetura MVC em camadas, dashboard, auditoria e busca avançada com 14 filtros.</p>
+                  <div class="project-links">
+                    <a href="#" target="_blank" class="project-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Acesso Restrito</a>
+                    <a href="https://github.com/gabsjf/InventarioCrea" target="_blank" class="project-link"><i class="fa-brands fa-github"></i> Ver Código</a>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <div class="swiper-slide">
+              <article class="project-card">
+                <div class="project-image">
+                  <img src="/src/AppHome.jpeg" alt="Prévia do App Home para gestão de tarefas" loading="lazy" decoding="async"/>
+                </div>
+                <div class="project-info">
+                  <h3>App Home - Gestor de Tarefas</h3>
+                  <p>Aplicação PWA com Firebase para gerenciar tarefas, com perfis de usuário, log de atividades e versão React Native em desenvolvimento.</p>
+                  <div class="project-links">
+                    <a href="#" target="_blank" class="project-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Acesso Restrito</a>
+                    <a href="https://github.com/gabsjf/app-home" target="_blank" class="project-link"><i class="fa-brands fa-github"></i> Ver Código</a>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <div class="swiper-slide">
+              <article class="project-card">
+                <div class="project-image">
+                  <img src="/src/Frontend.png" alt="Prévia do projeto Finans" loading="lazy" decoding="async"/>
+                </div>
+                <div class="project-info">
+                  <h3>Projeto Front End - Finans</h3>
+                  <p>Landing page responsiva para um software de gestão financeira, focada em conversão e construída com HTML, Bootstrap e jQuery.</p>
+                  <div class="project-links">
+                    <a href="https://finans-nrfi.onrender.com/" target="_blank" class="project-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+                    <a href="https://github.com/gabsjf/finans" target="_blank" class="project-link"><i class="fa-brands fa-github"></i> Ver Código</a>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <div class="swiper-slide">
+              <article class="project-card">
+                <div class="project-image">
+                  <img src="/src/Backend.png" alt="Prévia do projeto Chamados' Help" loading="lazy" decoding="async"/>
+                </div>
+                <div class="project-info">
+                  <h3>Chamados' Help</h3>
+                  <p>Sistema de gestão de chamados em PHP para otimizar o suporte técnico, permitindo um fluxo eficiente para abertura e resolução de tickets.</p>
+                  <div class="project-links">
+                    <a href="https://youtu.be/pmdeOtA2_VY" target="_blank" class="project-link"><i class="fa-solid fa-video"></i> Ver Vídeo</a>
+                    <a href="https://github.com/gabsjf/Chamados-Help" target="_blank" class="project-link"><i class="fa-brands fa-github"></i> Ver Código</a>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <div class="swiper-slide">
+              <article class="project-card">
+                <div class="project-image">
+                  <img src="/src/TNB.png" alt="Prévia do Jogo Try Not to Bubble" loading="lazy" decoding="async"/>
+                </div>
+                <div class="project-info">
+                  <h3>Try Not to Bubble</h3>
+                  <p>Jogo 2D desenvolvido em 48 horas para a Global Game Jam, criado na engine Unity com arte 100% original feita em Aseprite.</p>
+                  <div class="project-links">
+                    <a href="/src/try_not_to_bubble.zip" download class="project-link"><i class="fa-solid fa-download"></i> Baixar Jogo</a>
+                    <a href="https://github.com/gabsjf/Try-not-to-bubble" target="_blank" class="project-link"><i class="fa-brands fa-github"></i> Ver Código</a>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+          </div>
+        </div>
+        <div class="swiper-scrollbar"></div>
+      </div>
+    </section>
+
+    <section class="skills content-section" id="habilidades">
+      <div class="container">
+        <h2 class="section-title">Minhas Habilidades</h2>
+      </div>
+      <div class="skills-slider-container">
+        <div class="swiper skills-slider">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><div class="skill-card animatable"><i class="fa-solid fa-code"></i><h3>Front-end</h3><p>Vue.js, HTML5, CSS3, JavaScript, Bootstrap</p></div></div>
+            <div class="swiper-slide"><div class="skill-card animatable"><i class="fa-solid fa-server"></i><h3>Back-end</h3><p>Node.js, C#, .NET, PHP</p></div></div>
+            <div class="swiper-slide"><div class="skill-card animatable"><i class="fa-solid fa-database"></i><h3>Banco de Dados</h3><p>MySQL, SQL Server, Firebase, Entity Framework</p></div></div>
+            <div class="swiper-slide"><div class="skill-card animatable"><i class="fa-solid fa-gamepad"></i><h3>Game Dev</h3><p>Unity, C#, Game Maker Studio, Pixel Art (Aseprite)</p></div></div>
+            <div class="swiper-slide"><div class="skill-card animatable"><i class="fa-solid fa-people-group"></i><h3>Soft Skills</h3><p>Comunicação, Proatividade, Gestão de Tempo, Trabalho em Equipe</p></div></div>
+            <div class="swiper-slide"><div class="skill-card animatable"><i class="fa-solid fa-diagram-project"></i><h3>Arquitetura & Padrões</h3><p>MVC, Arquitetura em Camadas, APIs REST, Git/GitHub</p></div></div>
+          </div>
+        </div>
+        <div class="swiper-scrollbar"></div>
+      </div>
+    </section>
+
+    <section class="contact content-section" id="contato">
+      <div class="container">
+        <h2 class="section-title">Vamos Trabalhar Juntos?</h2>
+        <p>Estou disponível para novos projetos e desafios. Entre em contato!</p>
+        <div class="contact-links">
+          <a href="mailto:gabrieljf268@gmail.com" class="contact-icon" target="_blank" aria-label="Email"><i class="fas fa-envelope"></i></a>
+          <a href="https://www.linkedin.com/in/gabsfelix" target="_blank" class="contact-icon" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          <a href="https://github.com/gabsjf" class="contact-icon" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://wa.me/5567991417526" class="contact-icon" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        </div>
+        <a href="/assets/Currículo_Gabriel_Felix.pdf" download class="btn-secondary">
+          <i class="fa-solid fa-file-arrow-down"></i> Baixar meu Currículo
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 - Gabriel Felix. Feito com ❤️ e muito energético.</p>
+  </footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js" defer></script>
+
+ 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js" defer></script>
+
+  
+  <script src="script.js" defer></script>
+</body>
+</html>
